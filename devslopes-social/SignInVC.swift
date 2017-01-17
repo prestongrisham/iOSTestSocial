@@ -39,7 +39,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     //User Signed In
                     if let user = user {
-                       self.completeSignIn(id: user.uid)
+                        let userData = ["provider" : user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                     
                     print("CPG: User authenticated with email and password")
@@ -48,7 +49,8 @@ class SignInVC: UIViewController {
                         if error == nil {
                             print("CPG: User created with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider" : user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         } else if FIRAuthErrorCode(rawValue: error!._code) == .errorCodeEmailAlreadyInUse {
                             print("CPG: Email Address Already in Use")
@@ -96,14 +98,16 @@ class SignInVC: UIViewController {
             } else {
                 print("CPG: Sucessfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider" : credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
                 
             }
         })
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: "uid")
         performSegue(withIdentifier: "showFeedVC", sender: nil)
     }
