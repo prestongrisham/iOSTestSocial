@@ -237,7 +237,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="431"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYI-EZ-uft" id="J2n-KS-5uR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="430.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3j-sZ-hI6" customClass="LogInHeaderView" customModule="devslopes_social" customModuleProvider="target">
@@ -365,6 +365,9 @@
                             <constraint firstItem="5C2-Y6-aL5" firstAttribute="leading" secondItem="kBC-XL-Cq9" secondAttribute="leading" id="nbC-bx-dOf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="5C2-Y6-aL5" id="DIB-rz-JLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPj-sH-4nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
