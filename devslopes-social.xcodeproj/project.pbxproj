@@ -20,6 +20,8 @@
 		A9F2B58C1E2E4E8C00A39DDF /* RealSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B58B1E2E4E8C00A39DDF /* RealSignInButton.swift */; };
 		A9F2B58E1E2E525000A39DDF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F2B58D1E2E525000A39DDF /* FBSDKLoginKit.framework */; };
 		A9F2B5901E2E718200A39DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9F2B58F1E2E718200A39DDF /* GoogleService-Info.plist */; };
+		A9F2B5931E2E837C00A39DDF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5921E2E837C00A39DDF /* FeedVC.swift */; };
+		A9F2B5951E2E9BB900A39DDF /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5941E2E9BB900A39DDF /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A9F2B58D1E2E525000A39DDF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A9F2B58F1E2E718200A39DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9F2B5911E2E731500A39DDF /* devslopes-social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "devslopes-social.entitlements"; sourceTree = "<group>"; };
+		A9F2B5921E2E837C00A39DDF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		A9F2B5941E2E9BB900A39DDF /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A9F2B56E1E29419B00A39DDF /* SignInVC.swift */,
+				A9F2B5921E2E837C00A39DDF /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				A9F2B5871E2E4A8000A39DDF /* RoundSignInButton.swift */,
 				A9F2B5891E2E4C2300A39DDF /* LoginTextFields.swift */,
 				A9F2B58B1E2E4E8C00A39DDF /* RealSignInButton.swift */,
+				A9F2B5941E2E9BB900A39DDF /* FeedTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -270,8 +276,10 @@
 				A9F2B58A1E2E4C2300A39DDF /* LoginTextFields.swift in Sources */,
 				A9F2B5881E2E4A8000A39DDF /* RoundSignInButton.swift in Sources */,
 				A9F2B5841E29525200A39DDF /* LogInHeaderView.swift in Sources */,
+				A9F2B5931E2E837C00A39DDF /* FeedVC.swift in Sources */,
 				A9F2B58C1E2E4E8C00A39DDF /* RealSignInButton.swift in Sources */,
 				A9F2B56D1E29419B00A39DDF /* AppDelegate.swift in Sources */,
+				A9F2B5951E2E9BB900A39DDF /* FeedTableViewCell.swift in Sources */,
 				A9F2B5861E2952F700A39DDF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

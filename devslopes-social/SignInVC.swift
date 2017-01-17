@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -19,12 +20,16 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let userID = KeychainWrapper.standard.string(forKey: "uid") {
+            print("CPG: User ID is: \(userID)")
+            performSegue(withIdentifier: "showFeedVC", sender: nil)
+        }
+        
     }
 
     @IBAction func signInButtonPressed(_ sender: Any) {
@@ -33,12 +38,23 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     //User Signed In
+                    if let user = user {
+                       self.completeSignIn(id: user.uid)
+                    }
+                    
                     print("CPG: User authenticated with email and password")
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error == nil {
                             print("CPG: User created with Firebase")
-                        } else {
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
+                        } else if FIRAuthErrorCode(rawValue: error!._code) == .errorCodeEmailAlreadyInUse {
+                            print("CPG: Email Address Already in Use")
+                            // CREATE ALERT FOR THIS ERROR
+                        }
+                        else {
                             print("CPG: Error creating user: \(error)")
                         }
                     })
@@ -79,8 +95,17 @@ class SignInVC: UIViewController {
                 print("CPG: Firebase authentication error: \(error)")
             } else {
                 print("CPG: Sucessfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
+                
             }
         })
+    }
+    
+    func completeSignIn(id: String) {
+        KeychainWrapper.standard.set(id, forKey: "uid")
+        performSegue(withIdentifier: "showFeedVC", sender: nil)
     }
 
 }
