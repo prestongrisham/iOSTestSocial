@@ -77,6 +77,9 @@
                                     <constraint firstAttribute="height" constant="100" id="SKo-dF-Oth"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="FB-f-Logo__blue_1024"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMC-Vc-slk"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KF-NY-bCT" customClass="LoginTextFields" customModule="devslopes_social" customModuleProvider="target">
                                 <rect key="frame" x="74" y="382" width="227" height="30"/>

@@ -12,6 +12,7 @@ target 'devslopes-social' do
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
-  pod 'SwiftKeychainWrapper' 
+  pod 'SwiftKeychainWrapper'
+  pod 'FBSDKLoginKit'
 
 end
