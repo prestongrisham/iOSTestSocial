@@ -18,6 +18,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     @IBOutlet weak var captionTextField: UILabel!
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +29,21 @@ class FeedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(post: Post) {
+        self.post = post
+        self.captionTextField.text = post.caption
+        self.numberOfLikesLabel.text = post.likes.description
+        OperationQueue().addOperation {
+            let imageData = NSData(contentsOf: NSURL(string: post.imageURL) as! URL)
+            OperationQueue.main.addOperation {
+                self.mainImageView.image = UIImage(data: imageData as! Data)
+            }
+        }
+        
+        
+        
     }
 
 }
