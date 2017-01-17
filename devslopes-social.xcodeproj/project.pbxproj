@@ -14,6 +14,11 @@
 		A9F2B5741E29419B00A39DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F2B5731E29419B00A39DDF /* Assets.xcassets */; };
 		A9F2B5771E29419B00A39DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F2B5751E29419B00A39DDF /* LaunchScreen.storyboard */; };
 		A9F2B57F1E29420400A39DDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9F2B57E1E29420400A39DDF /* GoogleService-Info.plist */; };
+		A9F2B5841E29525200A39DDF /* LogInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5831E29525200A39DDF /* LogInHeaderView.swift */; };
+		A9F2B5861E2952F700A39DDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5851E2952F700A39DDF /* Constants.swift */; };
+		A9F2B5881E2E4A8000A39DDF /* RoundSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5871E2E4A8000A39DDF /* RoundSignInButton.swift */; };
+		A9F2B58A1E2E4C2300A39DDF /* LoginTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B5891E2E4C2300A39DDF /* LoginTextFields.swift */; };
+		A9F2B58C1E2E4E8C00A39DDF /* RealSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2B58B1E2E4E8C00A39DDF /* RealSignInButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		A9F2B5761E29419B00A39DDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9F2B5781E29419B00A39DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9F2B57E1E29420400A39DDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9F2B5831E29525200A39DDF /* LogInHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInHeaderView.swift; sourceTree = "<group>"; };
+		A9F2B5851E2952F700A39DDF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A9F2B5871E2E4A8000A39DDF /* RoundSignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundSignInButton.swift; sourceTree = "<group>"; };
+		A9F2B5891E2E4C2300A39DDF /* LoginTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFields.swift; sourceTree = "<group>"; };
+		A9F2B58B1E2E4E8C00A39DDF /* RealSignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealSignInButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 				A9F2B5751E29419B00A39DDF /* LaunchScreen.storyboard */,
 				A9F2B5781E29419B00A39DDF /* Info.plist */,
 				A9F2B57E1E29420400A39DDF /* GoogleService-Info.plist */,
+				A9F2B5851E2952F700A39DDF /* Constants.swift */,
 			);
 			path = "devslopes-social";
 			sourceTree = "<group>";
@@ -87,6 +98,10 @@
 		A9F2B5811E2944A100A39DDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9F2B5831E29525200A39DDF /* LogInHeaderView.swift */,
+				A9F2B5871E2E4A8000A39DDF /* RoundSignInButton.swift */,
+				A9F2B5891E2E4C2300A39DDF /* LoginTextFields.swift */,
+				A9F2B58B1E2E4E8C00A39DDF /* RealSignInButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -241,7 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F2B56F1E29419B00A39DDF /* SignInVC.swift in Sources */,
+				A9F2B58A1E2E4C2300A39DDF /* LoginTextFields.swift in Sources */,
+				A9F2B5881E2E4A8000A39DDF /* RoundSignInButton.swift in Sources */,
+				A9F2B5841E29525200A39DDF /* LogInHeaderView.swift in Sources */,
+				A9F2B58C1E2E4E8C00A39DDF /* RealSignInButton.swift in Sources */,
 				A9F2B56D1E29419B00A39DDF /* AppDelegate.swift in Sources */,
+				A9F2B5861E2952F700A39DDF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
