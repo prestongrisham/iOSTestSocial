@@ -35,15 +35,13 @@ class FeedTableViewCell: UITableViewCell {
         self.post = post
         self.captionTextField.text = post.caption
         self.numberOfLikesLabel.text = post.likes.description
+        
         OperationQueue().addOperation {
             let imageData = NSData(contentsOf: NSURL(string: post.imageURL) as! URL)
             OperationQueue.main.addOperation {
                 self.mainImageView.image = UIImage(data: imageData as! Data)
             }
         }
-        
-        
-        
     }
 
 }

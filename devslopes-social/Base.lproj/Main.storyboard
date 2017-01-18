@@ -207,12 +207,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dib-Yn-Ra2" customClass="LogInHeaderView" customModule="devslopes_social" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="343" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="waT-E3-2hr">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="waT-E3-2hr">
                                         <rect key="frame" x="8" y="10" width="45" height="45"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Vjy-jk-7Un"/>
                                             <constraint firstAttribute="width" constant="45" id="g75-Jr-N7v"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XcX-55-xqH" appends="YES" id="tRS-Ee-RKD"/>
+                                        </connections>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Photo Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvD-VA-ud5" customClass="LoginTextFields" customModule="devslopes_social" customModuleProvider="target">
                                         <rect key="frame" x="61" y="17" width="274" height="30"/>
@@ -366,10 +370,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addPhotoImageView" destination="waT-E3-2hr" id="QGW-cg-Wag"/>
                         <outlet property="tableView" destination="5C2-Y6-aL5" id="DIB-rz-JLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPj-sH-4nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XcX-55-xqH">
+                    <connections>
+                        <action selector="addImageTouched:" destination="vxo-Fv-xrv" id="Rvd-Of-AIw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="876" y="136.28185907046478"/>
         </scene>
